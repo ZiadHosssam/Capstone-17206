@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Gallery</title>
+    <meta
+      name="description"
+      content="A simple capstone gallery for videos and photos."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Capstone Gallery</h1>
+      <p>Photos and videos from our project journey.</p>
+    </header>
+
+    <main>
+      <section class="gallery-section" id="gallery">
+        <div class="section-head">
+          <h2>Gallery</h2>
+          <p>Filter by type and click any item to view it larger.</p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Gallery filters">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="photo">Photos</button>
+          <button class="filter-btn" data-filter="video">Videos</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="closeLightbox" aria-label="Close">
+        &times;
+      </button>
+      <button class="lightbox-nav prev" id="prevItem" aria-label="Previous">
+        &#10094;
+      </button>
+      <div class="lightbox-content" id="lightboxContent"></div>
+      <button class="lightbox-nav next" id="nextItem" aria-label="Next">
+        &#10095;
+      </button>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
